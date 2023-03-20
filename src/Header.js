@@ -1,30 +1,38 @@
 import React from 'react';
 import './Header.css';
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 function Header() {
     return (
         <div className='header'>
-            <img src="https://w7.pngwing.com/pngs/732/34/png-transparent-logo-amazon-com-brand-flipkart-others-text-orange-logo.png" alt="" className='header__logo' />
+            <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" className='header__logo' />
 
             <div className="header__search">
                 <input type="text" className='header__searchInput'/>
+                <SearchIcon className='header__searchIcon'/>
                 {/* Logo */}
             </div>
 
             <div className='header__nav'>
                 <div className='header__option'>
                     <span className="header__optionLineOne">Hello Guest</span>
-                    <span className="header__optionLineOne">Sign In</span>
+                    <span className="header__optionLineTwo">Sign In</span>
                 </div>
 
                 <div className='header__option'>
                     <span className="header__optionLineOne">Returns</span>
-                    <span className="header__optionLineOne">& Orders</span>
+                    <span className="header__optionLineTwo">& Orders</span>
                 </div>
 
                 <div className='header__option'>
                     <span className="header__optionLineOne">Your</span>
-                    <span className="header__optionLineOne">Prime</span>
+                    <span className="header__optionLineTwo">Prime</span>
+                </div>
+
+                <div className="header__optionBasket">
+                    <ShoppingBasketIcon/>
+                    <span className="header__optionLineTwo header__basketCount">0</span>
                 </div>
             </div>
         </div>
